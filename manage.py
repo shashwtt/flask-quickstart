@@ -24,6 +24,7 @@ def cli():
 def runserver(env, port):
     app = create_app(env)
     app.run(port=port)
+    app.debug = True
 
 # Add other commands here
 # Eg.

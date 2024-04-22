@@ -7,6 +7,10 @@ main = Blueprint(
 )
 
 
-@main.route('/', methods=['GET', 'POST'])
+@main.route('/')
 def index():
     return render_template('main/index.html')
+
+@main.route('/profile')
+def profile():
+    return 'Profile'

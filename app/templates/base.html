@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Auth</title>
+
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/tailwind.css')}}">
+</head>
+<body>
+    <header class="bg-gray-300 h-14">
+        <nav class="flex justify-between items-center h-full max-w-screen-2xl text-lg px-6 mx-auto">
+            <a href="{{url_for('main.index')}}" class="font-semibold">Flask-Auth</a>
+            
+        </nav>
+    </header>
+    <main class="p-5">
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

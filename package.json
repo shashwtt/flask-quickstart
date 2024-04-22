@@ -1,0 +1,16 @@
+{
+	"name": "flask-login",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "npx tailwindcss -i ./app/static/css/style.css -o ./app/static/css/tailwind.css --watch",
+		"build": "npx tailwindcss -i ./app/static/css/style.css -o ./app/static/css/tailwind.css"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"tailwindcss": "^3.4.3"
+	}
+}

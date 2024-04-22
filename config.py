@@ -53,5 +53,5 @@ class Testing:
 config = {
     'production': Production,
     'development': Development,
-    'testing': Testing
+    'testing': Testing,
 }
