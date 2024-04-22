@@ -17,6 +17,7 @@ class Production:
     # This will be overwritten by the values in
     # instance/config.py
     SECRET_KEY = 'production_secret_key'
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///db.sqlite'
 
     @staticmethod
     def init_app(app):
@@ -32,6 +33,7 @@ class Development:
     TESTING = False
     ENV = 'development'
     SECRET_KEY = 'development_secret_key'
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///db.sqlite'
 
     @staticmethod
     def init_app(app):
@@ -44,6 +46,7 @@ class Testing:
     TESTING = True
     ENV = 'testing'
     SECRET_KEY = 'testing_secret_key'
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///db.sqlite'
 
     @staticmethod
     def init_app(app):
@@ -54,4 +57,6 @@ config = {
     'production': Production,
     'development': Development,
     'testing': Testing,
+    'SECRET_KEY': 'super_secret_key',
+    'SQLALCHEMY_DATABASE_URI': 'sqlite:///db.sqlite'
 }

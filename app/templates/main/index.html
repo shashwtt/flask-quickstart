@@ -1,5 +1,11 @@
 {% extends 'base.html' %} {% block content %}
 
-<div class="text-2xl">Welcome to flask-auth</div>
+<div class="text-2xl mt-20 text-center">
+	{% if current_user.is_authenticated %}
+
+	<h1>Hey <span class="font-medium">{{ current_user.name }}</span>, Good to see you.</h1>
+
+	{% else %} Welcome to flask-auth, *please login to continue {% endif %}
+</div>
 
 {% endblock %}

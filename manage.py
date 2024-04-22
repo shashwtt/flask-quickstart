@@ -1,9 +1,6 @@
 import click
-from app import create_app
-# Import dependencies here
-# For example, if you were using SQLAlchem
-# from app import create_app, db
-
+from app.models import auth_models
+from app import create_app, db
 
 @click.group()
 def cli():
@@ -26,17 +23,14 @@ def runserver(env, port):
     app.run(port=port)
     app.debug = True
 
-# Add other commands here
-# Eg.
-# def initdb():
-#    ''' Create the SQL DB '''
-#    db.create_all()
+@click.command()
+def initdb():
+    db.create_all()
 
 
+# Register commands here
 cli.add_command(runserver)
-# Register other commands here
-# Eg.
-# cli.add_command(initdb)
+cli.add_command(initdb)
 
 if __name__ == "__main__":
     cli()

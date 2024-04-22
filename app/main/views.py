@@ -10,7 +10,3 @@ main = Blueprint(
 @main.route('/')
 def index():
     return render_template('main/index.html')
-
-@main.route('/profile')
-def profile():
-    return 'Profile'
